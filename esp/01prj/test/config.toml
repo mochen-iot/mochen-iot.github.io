@@ -2,10 +2,10 @@
 esp_toml_version = 1.0
 firmware_images_url = "https://mochen-iot.github.io/esp/bin/"
 
-supported_apps = ["switch_panda"]
+supported_apps = ["switch"]
 
 [switch_panda]
 chipsets = ["ESP32C3",]
-image.esp32c3 = "esp32.bin"
+image.esp32c3 = "switch.bin"
 ios_app_url = ""
 android_app_url = ""
