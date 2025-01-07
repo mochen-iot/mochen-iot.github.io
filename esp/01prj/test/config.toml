@@ -1,36 +1,11 @@
+
 esp_toml_version = 1.0
+firmware_images_url = "https://mochen-iot.github.io/esp/bin/"
 
-# 这是您固件二进制文件所在文件服务器的公开访问 URL
-firmware_images_url = "<http://img.mochen.top/esp32c3.bin>"
+supported_apps = ["switch_panda"]
 
-# 您支持的应用程序以及二进制文件是否可发布的应用程序。您可以列出多个应用程序，使用逗号分隔
-# 启动界面会自动显示这些应用程序在可用应用程序的下拉菜单中
-# 每个列出的应用程序都应该有一个配置部分
-supported_apps = ["test"]
-
-# 可选：这是一个公开访问的 URL，指向应用程序配置的 markdown 文件
-# 该 markdown 文件将显示应用程序配置。
-# 它可能包含 ESP-IDF、ESP-Matter 等的修订版本，或其他任何应用程序配置的细节
-config_readme_url = "<应用配置 README 文件的 URL>"
-
-[YOUR_FIRMWARE_APP_NAME]
-# 为您支持的固件应用程序定义的 ESP32 芯片组。为每个支持的芯片组定义一个属性，格式如下。
-chipsets = ["ESP32", "ESP32-S2", "ESP32-C3", "ESP32-S3"]
-# 可选：为芯片型号设置开发板。
-developKits.esp32-s3 = ["esp32-s3-box", "esp32-s3-box3"]
-# 配置二进制文件的名称
-image.esp32 = "SINGLE_BIN_FOR_ESP32.bin"
-image.esp32-s2 = "SINGLE_BIN_FOR_ESP32-S2.bin"
-image.esp32-c3 = "SINGLE_BIN_FOR_ESP32-C3.bin"
-# 可选：为开发板配置图像文件的名称。在此配置下，image.esp32-s3 将变为无效。
-image.esp32-s3-box = "SINGLE_BIN_FOR_ESP32-S3-BOX.bin"
-image.esp32-s3-box3 = "SINGLE_BIN_FOR_ESP32-S3-BOX3.bin"
-# 可选：应用程序的简短介绍。
-description = "固件应用程序的描述"
-# 可选：如果有，提供 Android 应用程序的 Play Store URL
-android_app_url = ""
+[switch_panda]
+chipsets = ["ESP32C3",]
+image.esp32c3 = "esp32.bin"
 ios_app_url = ""
-# 可选：有关应用程序的更多信息的 Markdown 文件的 URL
-readme.text = "<Markdown 文件的 URL>"
-# 可选：应用程序固件支持的控制台波特率（默认值为 115200）
-console_baudrate = <支持的控制台波特率>
+android_app_url = ""
